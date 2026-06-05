@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
 
   document.getElementById('view-all-trending')?.addEventListener('click', () => {
-    window.location.href = '../Produit/Produit.html';
+    window.location.href = 'Produit/Produit.html';
   });
 
   ['explore-summer', 'explore-winter'].forEach(id => {
