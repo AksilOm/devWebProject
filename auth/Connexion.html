@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silk Road | Connexion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="../Accueil/images accueil/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Auth.css">
+</head>
+
+<body>
+ 
+  <div class="page-wrapper">
+    <div class="auth-canvas">
+      <div class="auth-grid">
+        <div class="auth-visual">
+          <div class="visual-overlay"></div>
+          <img src="../Accueil/images accueil/image1.jpg" alt="Silk Road" class="visual-img">
+          <div class="visual-content">
+            <a href="Projet Final/Accueil/index.html" class="visual-logo">Silk Road</a>
+            <div class="visual-quote">
+              <blockquote>"Élevez votre style,<br>embrassez votre histoire."</blockquote>
+              <div class="quote-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auth-form-panel">
+          <div class="auth-form-inner">
+            <a href="../Accueil/index.html" class="back-home-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+                Retour a l'accueil
+            </a>
+            <div class="mobile-logo"><a href="../index.html" class="logo-link-mobile">Silk Road</a></div>
+            <div class="form-header"><span class="form-subtitle">Bienvenue !</span>
+              <h1 class="form-title">Se <em class="italic">connecter</em></h1>
+              <p class="form-desc">Entrez vos identifiants pour accéder à votre compte.</p>
+            </div>
+            <div class="social-login">
+              <button class="social-btn" type="button"><i class="fa-brands fa-google"></i> Continuer avec
+                Google</button>
+              <button class="social-btn" type="button"><i class="fa-brands fa-facebook"></i> Continuer avec
+                Facebook</button>
+            </div>
+            <div class="divider-text"><span>ou continuer avec email</span></div>
+            <form id="login-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <div class="input-wrap"><i class="fa-regular fa-envelope input-icon"></i><input type="email" id="email"
+                    class="form-input" placeholder="amira@exemple.com" autocomplete="email"></div>
+                <span class="error-msg" id="email-error">Veuillez entrer une adresse email valide.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="password">Mot de passe <span class="required">*</span></label>
+                <div class="input-wrap"><i class="fa-solid fa-lock input-icon"></i><input type="password" id="password"
+                    class="form-input" placeholder="••••••••" autocomplete="current-password"><button type="button"
+                    class="toggle-pw" id="toggle-pw" aria-label="Afficher le mot de passe"><i class="fa-regular fa-eye"
+                      id="pw-eye-icon"></i></button></div>
+                <span class="error-msg" id="password-error">Le mot de passe doit contenir au moins 6 caractères.</span>
+              </div>
+              <div class="form-row-inline">
+                <label class="checkbox-label"><input type="checkbox" id="remember-me" class="checkbox-input"><span
+                    class="checkbox-custom"></span> Se souvenir de moi</label>
+                <a href="#" class="forgot-link">Mot de passe oublié ?</a>
+              </div>
+              <div class="alert alert-error" id="login-error" style="display:none;"><i
+                  class="fa-solid fa-circle-exclamation"></i><span id="login-error-msg">Identifiants incorrects.
+                  Veuillez réessayer.</span></div>
+              <div class="alert alert-success" id="login-success" style="display:none;"><i
+                  class="fa-solid fa-circle-check"></i><span>Connexion réussie ! Redirection en cours...</span></div>
+              <button type="submit" class="submit-btn" id="submit-btn"><span id="btn-text">Se connecter</span><i
+                  class="fa-solid fa-arrow-right" id="btn-icon"></i></button>
+            </form>
+            <p class="auth-switch">Pas encore de compte ? <a href="Inscription.html" class="auth-switch-link">S'inscrire
+                gratuitement</a></p>
+            <div class="demo-hint"><i class="fa-solid fa-circle-info"></i><span>Comptes demo :
+                <strong>admin@silkroad.dz</strong> / <strong>admin123</strong> ou <strong>user@silkroad.dz</strong> /
+                <strong>user123</strong></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Connexion.js"></script>
+</body>
+
+</html>

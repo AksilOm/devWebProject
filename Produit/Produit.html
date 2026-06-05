@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silk Road | Catalogue Produits</title>
+  <meta name="description" content="Explorez toute la collection Silk Road — vêtements femme, homme et accessoires.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../Accueil/images accueil/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Produit.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <main class="boutique-canvas">
+
+      <!--NAVBAR-->
+      <header class="navbar" id="site-header">
+        <div class="logo">
+          <a href="../Accueil/index.html" class="logo-link">Silk Road</a>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="../Accueil/index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i> Accueil
+          </a>
+          <a href="#" class="nav-item active">Catalogue</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="../auth/Connexion.html" class="icon-btn auth-btn">
+            <i class="fa-solid fa-user"></i>
+            <span class="auth-label">Connexion</span>
+          </a>
+          <a href="../auth/Inscription.html" class="icon-btn auth-btn register-btn">
+            <i class="fa-solid fa-user-plus"></i>
+            <span class="auth-label">Inscription</span>
+          </a>
+          <button class="icon-btn" id="wishlist-btn" aria-label="Favoris">
+            <i class="fa-regular fa-bookmark"></i>
+            <span class="badge" id="wishlist-count">0</span>
+          </button>
+          <button class="icon-btn" id="cart-btn" aria-label="Panier">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </header>
+
+      
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <span class="subtitle">Notre Collection</span>
+          <h1 class="page-title">Tous les <span class="serif-italic">Produits</span></h1>
+          <p class="page-desc">Découvrez l'intégralité de notre sélection curatée — du casual chic à l'élégance formelle.</p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">Au bout de 24h</span><span class="stat-label">Livraison</span></div>
+        </div>
+      </section>
+
+      <!--FILTRES-->
+      <section class="filters-bar" id="filters-bar">
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un produit...">
+          <button class="search-clear" id="search-clear" aria-label="Effacer">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label">Catégorie</label>
+          <div class="category-pills" id="category-pills">
+            <button class="pill active" data-cat="all">Tout</button>
+            <button class="pill" data-cat="jacket">Vestes</button>
+            <button class="pill" data-cat="shirt">Chemises & Tops</button>
+            <button class="pill" data-cat="outfit">Tenues Sport</button>
+            <button class="pill" data-cat="dress">Robes</button>
+            <button class="pill" data-cat="accessories">Accessoires</button>
+          </div>
+        </div>
+
+        <div class="filter-group price-filter">
+          <label class="filter-label">Prix max : <span id="price-display">$250</span></label>
+          <div class="range-wrap">
+            <input type="range" id="price-range" class="price-range" min="20" max="250" value="250" step="5">
+            <div class="range-fill" id="range-fill"></div>
+          </div>
+        </div>
+
+        <div class="filter-group sort-group">
+          <label class="filter-label">Trier par</label>
+          <select class="sort-select" id="sort-select">
+            <option value="default">Par défaut</option>
+            <option value="price-asc">Prix croissant</option>
+            <option value="price-desc">Prix décroissant</option>
+            <option value="name-asc">A → Z</option>
+          </select>
+        </div>
+
+        <button class="reset-btn" id="reset-filters">
+          <i class="fa-solid fa-rotate-left"></i> Réinitialiser
+        </button>
+      </section>
+
+      <!-- RÉSULTATS -->
+      <div class="results-bar">
+        <span id="results-count" class="results-text">15 produits trouvés</span>
+        <div class="view-toggle">
+          <button class="view-btn active" id="grid-view" aria-label="Vue grille"><i class="fa-solid fa-grip"></i></button>
+          <button class="view-btn" id="list-view" aria-label="Vue liste"><i class="fa-solid fa-list"></i></button>
+        </div>
+      </div>
+
+      <!--GRILLE PRODUITS-->
+      <div class="products-grid" id="products-grid">
+        <!-- Injecté par JS -->
+      </div>
+
+      <!-- Aucun résultat -->
+      <div class="no-results" id="no-results" style="display:none;">
+        <i class="fa-solid fa-box-open"></i>
+        <p>Aucun produit ne correspond à votre recherche.</p>
+        <button class="reset-btn" id="reset-no-results">
+          <i class="fa-solid fa-rotate-left"></i> Réinitialiser les filtres
+        </button>
+      </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="store-footer">
+      <div class="store-footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Silk Road</span>
+          <p class="footer-tagline">Élevez votre style, embrassez votre histoire.</p>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-col-title">Contactez-nous</h4>
+          <a href="mailto:contact@silkroad-boutique.com" class="footer-contact-item">
+            <i class="fa-regular fa-envelope"></i><span>contact@silkroad-boutique.com</span>
+          </a>
+          <a href="tel:+213555123456" class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i><span>+213 555 123 456</span>
+          </a>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i><span>12 Rue Amyoud, Tizi-Ouzou, Algérie</span>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h4 class="footer-col-title">Suivez-nous</h4>
+          <a href="https://facebook.com/silkroadboutique" target="_blank" rel="noopener" class="footer-social-item">
+            <i class="fa-brands fa-facebook"></i><span>Facebook</span>
+          </a>
+          <a href="https://instagram.com/silkroad_boutique" target="_blank" rel="noopener" class="footer-social-item">
+            <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+          </a>
+          <a href="https://snapchat.com/add/silkroadboutique" target="_blank" rel="noopener" class="footer-social-item">
+            <i class="fa-brands fa-snapchat"></i><span>Snapchat</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Silk Road Boutique. Conçu avec élégance.</p>
+        <div class="footer-links">
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!--PRODUIT -->
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Fermer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-grid">
+        <div class="modal-visual">
+          <img src="" alt="Vue produit" id="modal-product-img">
+        </div>
+        <div class="modal-details">
+          <span class="modal-tag">Nouveau</span>
+          <h2 class="modal-title" id="modal-product-title">Nom du produit</h2>
+          <span class="modal-price" id="modal-product-price">$0.00</span>
+          <div class="divider"></div>
+          <p class="modal-description" id="modal-product-desc">Description.</p>
+          <div class="modal-options">
+            <div class="option-group">
+              <span class="option-label" id="modal-size-label">Taille</span>
+              <div class="size-selectors" id="modal-size-group"></div>
+            </div>
+            <div class="option-group">
+              <span class="option-label">Couleur</span>
+              <div class="color-selectors" id="modal-color-group"></div>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button class="modal-add-btn" id="modal-add-to-cart">Ajouter au panier</button>
+            <button class="modal-save-btn" id="modal-save-wishlist">
+              <i class="fa-regular fa-bookmark"></i>
+              <span class="save-btn-text">Sauvegarder</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--PANIER-->
+  <div class="side-panel" id="cart-panel" role="dialog" aria-modal="true">
+    <div class="side-panel-inner">
+      <div class="side-panel-header">
+        <h3 class="side-panel-title">Mon Panier</h3>
+        <button class="side-panel-close" id="cart-panel-close"><i class="fa-solid fa-x"></i></button>
+      </div>
+      <div class="side-panel-body">
+        <div id="cart-empty-msg" class="panel-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/>
+          </svg>
+          <p>Votre panier est vide</p>
+        </div>
+        <div id="cart-panel-items"></div>
+      </div>
+      <div class="side-panel-footer">
+        <div class="cart-total" id="cart-panel-total">Total : $0.00</div>
+        <a href="../commande/Commande.html"><button class="checkout-btn">Commander →</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!--FAVORIS-->
+  <div class="side-panel" id="wishlist-panel" role="dialog" aria-modal="true">
+    <div class="side-panel-inner">
+      <div class="side-panel-header">
+        <h3 class="side-panel-title">Mes Favoris</h3>
+        <button class="side-panel-close" id="wishlist-panel-close"><i class="fa-solid fa-x"></i></button>
+      </div>
+      <div class="side-panel-body">
+        <div id="wishlist-empty-msg" class="panel-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"/>
+          </svg>
+          <p>Aucun article sauvegardé</p>
+        </div>
+        <div id="wishlist-panel-items"></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="toast-container" id="toast-wrapper"></div>
+
+  <script src="Produit.js"></script>
+</body>
+</html>

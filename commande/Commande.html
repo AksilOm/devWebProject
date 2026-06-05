@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silk Road | Finaliser ma commande</title>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="../Accueil/images accueil/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" href="Commande.css">
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <div class="boutique-canvas">
+
+
+      <header class="navbar">
+        <a href="../Accueil/index.html" class="logo-link">Silk Road</a>
+        <a href="../Produit/Produit.html"><button class="back-btn">
+            <i class="fa-solid fa-arrow-left" style="font-size:14px;"></i>
+            Retour à la boutique
+          </button></a>
+      </header>
+
+
+      <div class="steps-bar">
+        <div class="step done">
+          <div class="step-num"><i class="fa-solid fa-check" style="font-size:12px;"></i></div>
+          <span>Panier</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step active">
+          <div class="step-num">2</div>
+          <span>Livraison &amp; Paiement</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step" id="step-confirm">
+          <div class="step-num">3</div>
+          <span>Confirmation</span>
+        </div>
+      </div>
+
+
+      <div class="page-header">
+        <span class="page-subtitle">Finaliser l'achat</span>
+        <h1 class="page-title">Votre <em class="italic">Commande</em></h1>
+      </div>
+
+
+      <div class="checkout-grid">
+
+
+        <div class="checkout-form">
+
+
+          <div class="form-section">
+            <div class="section-head">
+              <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <span class="section-label">Étape 1</span>
+                <div class="section-title">Informations personnelles</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="prenom">Prénom <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="prenom" class="form-input" placeholder="Amira" autocomplete="given-name">
+                  <i class="fa-regular fa-id-card input-icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="nom">Nom <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="nom" class="form-input" placeholder="Benali" autocomplete="family-name">
+                  <i class="fa-regular fa-id-card input-icon"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="email" id="email" class="form-input" placeholder="amira@exemple.com"
+                    autocomplete="email">
+                  <i class="fa-regular fa-envelope input-icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Téléphone <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="tel" id="phone" class="form-input" placeholder="+213 555 000 000" autocomplete="tel">
+                  <i class="fa-solid fa-phone input-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-section">
+            <div class="section-head">
+              <div class="section-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span class="section-label">Étape 2</span>
+                <div class="section-title">Adresse de livraison</div>
+              </div>
+            </div>
+            <div class="form-row single">
+              <div class="form-group">
+                <label class="form-label" for="adresse">Adresse complète <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="adresse" class="form-input" placeholder="12 Rue des Oliviers, Appartement 3"
+                    autocomplete="street-address">
+                  <i class="fa-solid fa-map-pin input-icon"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-row triple">
+              <div class="form-group">
+                <label class="form-label" for="ville">Ville <span class="required">*</span></label>
+                <input type="text" id="ville" class="form-input" placeholder="Tizi-Ouzou" autocomplete="address-level2">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="wilaya">Wilaya <span class="required">*</span></label>
+                <select id="wilaya" class="form-select">
+                  <option value="">Sélectionner</option>
+                  <option>Alger</option>
+                  <option>Oran</option>
+                  <option selected>Tizi-Ouzou</option>
+                  <option>Constantine</option>
+                  <option>Annaba</option>
+                  <option>Béjaïa</option>
+                  <option>Blida</option>
+                  <option>Sétif</option>
+                  <option>Sidi Bel Abbès</option>
+                  <option>Batna</option>
+                  <option>Biskra</option>
+                  <option>Tlemcen</option>
+                  <option>Médéa</option>
+                  <option>Mostaganem</option>
+                  <option>M'Sila</option>
+                  <option>Mascara</option>
+                  <option>Ouargla</option>
+                  <option>Boumerdès</option>
+                  <option>Tipaza</option>
+                  <option>Aïn Defla</option>
+                  <option>Naâma</option>
+                  <option>Aïn Témouchent</option>
+                  <option>Ghardaïa</option>
+                  <option>Relizane</option>
+                  <option>El Bayadh</option>
+                  <option>Tissemsilt</option>
+                  <option>El Oued</option>
+                  <option>Khenchela</option>
+                  <option>Souk Ahras</option>
+                  <option>Tamanghasset</option>
+                  <option>Tébessa</option>
+                  <option>Illizi</option>
+                  <option>Bordj Bou Arréridj</option>
+                  <option>Bouira</option>
+                  <option>Tamanrasset</option>
+                  <option>Djelfa</option>
+                  <option>Jijel</option>
+                  <option>Skikda</option>
+                  <option>Guelma</option>
+                  <option>Laghouat</option>
+                  <option>Oum El Bouaghi</option>
+                  <option>Saïda</option>
+                  <option>Chlef</option>
+                  <option>El Tarf</option>
+                  <option>Tiaret</option>
+                  <option>Mila</option>
+                  <option>Adrar</option>
+                  <option>Tindouf</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="code-postal">Code postal</label>
+                <input type="text" id="code-postal" class="form-input" placeholder="15000" autocomplete="postal-code">
+              </div>
+            </div>
+
+
+            <div class="form-row single" style="margin-top: 6px;">
+              <div class="form-group">
+                <label class="form-label" for="date-livraison">Date limite de livraison souhaitée <span
+                    class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="date" id="date-livraison" class="form-input" min="">
+                  <i class="fa-regular fa-calendar input-icon"></i>
+                </div>
+                <div class="delivery-info-box" id="delivery-info">
+                  <i class="fa-solid fa-truck-fast"></i>
+                  <p>Votre commande sera livrée au plus tard le <strong id="delivery-date-display">—</strong>. Délai
+                    estimé : <strong>3 à 7 jours ouvrables</strong> selon votre wilaya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-section">
+            <div class="section-head">
+              <div class="section-icon"><i class="fa-solid fa-credit-card"></i></div>
+              <div>
+                <span class="section-label">Étape 3</span>
+                <div class="section-title">Informations de paiement</div>
+              </div>
+            </div>
+
+            <div class="form-row single">
+              <div class="form-group">
+                <label class="form-label" for="card-holder">Nom sur la carte <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="card-holder" class="form-input" placeholder="AMIRA BENALI"
+                    autocomplete="cc-name" style="text-transform:uppercase; letter-spacing: 1px;">
+                  <i class="fa-regular fa-user input-icon"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row single">
+              <div class="form-group">
+                <label class="form-label" for="card-number">Numéro de carte <span class="required">*</span></label>
+                <div class="card-number-wrap">
+                  <input type="text" id="card-number" class="form-input" placeholder="0000  0000  0000  0000"
+                    maxlength="19" autocomplete="cc-number"
+                    style="padding-right: 100px; letter-spacing: 2px; font-weight: 600;">
+                  <div class="card-brand-icons">
+                    <i class="fa-brands fa-cc-visa" id="icon-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard" id="icon-mc"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row triple">
+              <div class="form-group" style="grid-column: span 2;">
+                <label class="form-label" for="card-expiry">Date d'expiration <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="text" id="card-expiry" class="form-input" placeholder="MM / AA" maxlength="7"
+                    autocomplete="cc-exp">
+                  <i class="fa-regular fa-calendar-days input-icon"></i>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="card-cvv">CVV <span class="required">*</span></label>
+                <div class="input-wrap">
+                  <input type="password" id="card-cvv" class="form-input" placeholder="•••" maxlength="4"
+                    autocomplete="cc-csc">
+                  <i class="fa-solid fa-lock input-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="order-summary">
+          <div class="summary-card">
+            <h2 class="summary-title">Récapitulatif</h2>
+
+            <div class="summary-items" id="summary-items">
+
+            </div>
+
+
+            <div class="shipping-banner not-free" id="shipping-banner">
+              <div class="shipping-banner-icon"><i class="fa-solid fa-truck" id="banner-truck-icon"></i></div>
+              <div class="shipping-banner-text">
+                <strong id="banner-title">Livraison offerte dès 200 $</strong>
+                <span id="banner-sub">Ajoutez <span id="banner-remaining">—</span> pour bénéficier de la livraison
+                  gratuite</span>
+                <div class="shipping-progress-wrap" id="progress-wrap">
+                  <div class="shipping-progress-bar">
+                    <div class="shipping-progress-fill" id="progress-fill" style="width:0%"></div>
+                  </div>
+                  <div class="shipping-progress-label"><span id="progress-label">0 $ / 200 $</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="summary-lines">
+              <div class="summary-line">
+                <span class="label">Sous-total</span>
+                <span class="value" id="subtotal-val">—</span>
+              </div>
+              <div class="summary-line" id="shipping-line">
+                <span class="label">Livraison</span>
+                <span class="value" id="shipping-val">—</span>
+              </div>
+              <div class="summary-line total-line">
+                <span class="label">Total</span>
+                <span class="value" id="total-val">—</span>
+              </div>
+            </div>
+
+            <button class="submit-btn" id="submit-order">
+              <i class="fa-solid fa-shield-halved"></i>
+              Confirmer ma commande
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <p class="secure-note">
+              <i class="fa-solid fa-lock" style="font-size:11px;"></i>
+              Paiement 100% sécurisé — SSL 256 bits
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="success-overlay" id="success-overlay">
+    <div class="success-card">
+      <div class="success-icon-wrap">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <span class="success-tag">Commande confirmée</span>
+      <h2 class="success-title">Merci pour votre <em>achat</em>!</h2>
+      <p class="success-desc">
+        Votre commande a bien été enregistrée. Vous recevrez un email de confirmation sous peu avec le suivi de votre
+        livraison.
+      </p>
+      <div class="success-meta">
+        <div class="success-meta-line">
+          <span class="m-label">Commande N°</span>
+          <span class="m-value" id="confirm-order-num">#SR-000000</span>
+        </div>
+        <div class="success-meta-line">
+          <span class="m-label">Livraison estimée</span>
+          <span class="m-value" id="confirm-delivery">—</span>
+        </div>
+        <div class="success-meta-line">
+          <span class="m-label">Total payé</span>
+          <span class="m-value" id="confirm-total">—</span>
+        </div>
+      </div>
+      <div class="success-actions">
+        <a href="../Accueil/index.html" class="btn-primary-sm">
+          <i class="fa-solid fa-bag-shopping" style="font-size:14px;"></i>
+          Continuer mes achats
+        </a>
+        <button class="btn-secondary-sm" onclick="window.print()">
+          <i class="fa-solid fa-print" style="font-size:14px;"></i>
+          Imprimer
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="Commande.js"></script>
+
+</body>
+
+</html>
