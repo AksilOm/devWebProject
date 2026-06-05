@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silk Road | Inscription</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="icon" type="image/png" href="../Accueil/images accueil/Logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Auth.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="auth-canvas">
+      <div class="auth-grid">
+        <div class="auth-visual">
+          <div class="visual-overlay"></div>
+          <img src="../Accueil/images accueil/image1.jpg" alt="Silk Road" class="visual-img">
+          <div class="visual-content">
+            <a href="Projet Final/Accueil/index.html" class="visual-logo">Silk Road</a>
+            <div class="visual-quote">
+              <blockquote>"Élevez votre style,<br>embrassez votre histoire."</blockquote>
+              <div class="quote-dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="auth-form-panel">
+          <div class="auth-form-inner">
+            <a href="../Accueil/index.html" class="back-home-btn">
+              <i class="fa-solid fa-arrow-left"></i>
+                Retour a l'Accueil
+            </a>
+            <div class="mobile-logo"><a href="../index.html" class="logo-link-mobile">Silk Road</a></div>
+            <div class="form-header"><span class="form-subtitle">Rejoignez-nous</span>
+              <h1 class="form-title">Créer un <em class="italic">compte</em></h1>
+              <p class="form-desc">Inscrivez-vous pour profiter de notre collection exclusive.</p>
+            </div>
+            <div class="social-login">
+              <button class="social-btn" type="button"><i class="fa-brands fa-google"></i> S'inscrire avec
+                Google</button>
+              <button class="social-btn" type="button"><i class="fa-brands fa-facebook"></i> S'inscrire avec
+                Facebook</button>
+            </div>
+            <div class="divider-text"><span>ou utiliser votre email</span></div>
+            <form id="register-form" novalidate>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label" for="prenom">Prénom <span
+                      class="required">*</span></label><input type="text" id="prenom" class="form-input"
+                    placeholder="Amira"></div>
+                <div class="form-group"><label class="form-label" for="nom">Nom <span
+                      class="required">*</span></label><input type="text" id="nom" class="form-input"
+                    placeholder="Benali"></div>
+              </div>
+              <div class="form-group"><label class="form-label" for="email">Email <span
+                    class="required">*</span></label><input type="email" id="email" class="form-input"
+                  placeholder="amira@exemple.com"></div>
+              <div class="form-group"><label class="form-label" for="password">Mot de passe <span
+                    class="required">*</span></label><input type="password" id="password" class="form-input"
+                  placeholder="••••••••"><span class="error-msg">Minimum 6 caractères, une majuscule, une minuscule, un
+                  chiffre.</span></div>
+              <div class="form-group"><label class="form-label" for="confirm-password">Confirmer le mot de passe <span
+                    class="required">*</span></label><input type="password" id="confirm-password" class="form-input"
+                  placeholder="••••••••"></div>
+              <div class="alert alert-error" id="register-error" style="display:none;"><i
+                  class="fa-solid fa-circle-exclamation"></i><span>Erreur d'inscription.</span></div>
+              <div class="alert alert-success" id="register-success" style="display:none;"><i
+                  class="fa-solid fa-circle-check"></i><span>Inscription réussie ! Redirection...</span></div>
+              <button type="submit" class="submit-btn">S'inscrire <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <p class="auth-switch">Déjà un compte ? <a href="Connexion.html" class="auth-switch-link">Se connecter</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="Inscription.js"></script>
+</body>
+
+</html>

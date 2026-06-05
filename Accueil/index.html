@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silk Road | Elevate Style, Embrace Story</title>
+  <meta name="description" content="Découvrez les collections exclusives Silk Road. Élevez votre style et embrassez votre histoire.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="../Accueil/images accueil/Logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <main class="boutique-canvas" id="main-content">
+
+      <!-- NAVBAR -->
+      <header class="navbar" id="site-header">
+        <div class="logo">
+          <a href="#" class="logo-link">Silk Road</a>
+        </div>
+
+        <nav class="nav-menu" id="nav-links">
+          <a href="#hero" class="nav-item active">Accueil</a>
+          <a href="#trending" class="nav-item">Collections</a>
+          <a href="#summer" class="nav-item">Marques</a>
+          <a href="#footer" class="nav-item">À propos</a>
+        </nav>
+
+        <div class="nav-actions">
+
+          
+        <a href="../auth/Connexion.html" class="icon-btn auth-btn connexion" id="login-btn">
+          <i class="fa-solid fa-user"></i>
+            <span class="auth-label">Connexion</span>
+        </a>
+
+          <!-- Bouton d'inscription -->
+       
+       <a href="../auth/Inscription.html" class="icon-btn auth-btn connexion" id="login-btn">
+          <i class="fa-solid fa-user-plus"></i>
+            <span class="auth-label">Inscription</span>
+       </a>
+
+          
+          <button class="icon-btn" id="wishlist-btn" aria-label="Voir les favoris">
+            <i class="fa-regular fa-bookmark"></i>
+            <span class="badge" id="wishlist-count">0</span>
+          </button>
+
+         
+          <button class="icon-btn" id="cart-btn" aria-label="Voir le panier">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge" id="cart-count">0</span>
+          </button>
+        </div>
+      </header>
+
+      
+      <section class="hero-section" id="hero">
+        <div class="hero-content">
+          <h1 class="hero-title animate-fade-in">
+            Elevate Style,<br>
+            <span class="italic-text">Embrace</span> Story
+          </h1>
+          <p class="hero-desc animate-fade-in-delayed">
+            Nous offrons la plus grande collection de vêtements pour toutes les saisons. Choisissez un design tendance ou classique selon vos préférences. Nos services sont ultra rapides et nous mettons à jour sous 24 heures.
+          </p>
+          <div class="hero-actions animate-fade-in-delayed">
+            <a href="#trending" class="explore-btn">
+              Explorer
+              <span class="arrow-wrap">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="gold-frame"></div>
+          <div class="backdrop-arch"></div>
+          <img src="images accueil/image1.jpg"
+               alt="Silk Road Collection Model" class="hero-model" id="hero-model-img">
+        </div>
+      </section>
+
+      
+      <section class="trending-section" id="trending">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="subtitle">Sélection Curatée</span>
+            <h2 class="section-title">Collections <span class="serif">Tendance</span></h2>
+          </div>
+          <a href="../Produit/Produit.html"><button class="view-all-btn" id="view-all-trending">
+            Voir tout
+            <i class="fa-solid fa-arrow-right"></i>
+          </button></a>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- Produit 1 -->
+          <article class="product-card" data-id="1">
+            <div class="card-visual">
+              <img src="images accueil/casual.jpg" alt="Casual Shirt For Woman" class="product-img">
+              <button class="bookmark-btn" aria-label="Ajouter aux favoris">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="card-info">
+              <h3 class="product-title">Casual jacket femme</h3>
+              <div class="card-footer">
+                <span class="product-price">$45.99</span>
+                <button class="quick-add-btn" aria-label="Ajouter au panier">Ajouter au panier</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produit 2 -->
+          <article class="product-card" data-id="2">
+            <div class="card-visual">
+              <img src="images accueil/sport.jpg" alt="Exercise Outfit" class="product-img">
+              <button class="bookmark-btn" aria-label="Ajouter aux favoris">
+               <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="card-info">
+              <h3 class="product-title">Tenue du Sport</h3>
+              <div class="card-footer">
+                <span class="product-price">$62.50</span>
+                <button class="quick-add-btn" aria-label="Ajouter au panier">Ajouter au panier</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Produit 3 -->
+          <article class="product-card" data-id="3">
+            <div class="card-visual">
+              <img src="images accueil/vestecuir.jpg" alt="Jacket For Winter" class="product-img">
+              <button class="bookmark-btn" aria-label="Ajouter aux favoris">
+                <i class="fa-regular fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="card-info">
+              <h3 class="product-title">Veste en cuire</h3>
+              <div class="card-footer">
+                <span class="product-price">$120.00</span>
+                <button class="quick-add-btn" aria-label="Ajouter au panier">Ajouter au panier</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      
+      <div class="seasonal-split">
+
+        <section class="seasonal-block summer-theme" id="summer">
+          <div class="seasonal-desc-box">
+            <span class="season-badge">Hot Drop</span>
+            <h2 class="seasonal-heading">Collections <span class="serif">Été</span></h2>
+            <p class="seasonal-text">
+              Nous proposons la plus grande collection de vêtements pour chaque saison. Choisissez un design tendance ou classique selon vos préférences. Nos services sont ultra rapides, mis à jour en 24 heures.
+            </p>
+            <a href="../Produit/Produit.html"><button class="explore-btn outline-btn" id="explore-summer">
+              Explorer
+              <span class="arrow-wrap">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </button></a>
+          </div>
+          <div class="seasonal-grid">
+            <div class="grid-card tall-card">
+              <img src="images accueil/vettementEte.jpg" alt="Summer Resort Wear">
+              <div class="grid-card-overlay"><span>Resort Linen Set</span></div>
+            </div>
+            <div class="grid-card">
+              <img src="images accueil/hoodiejaune.jpg" alt="Casual Sundress">
+              <div class="grid-card-overlay"><span>Sun Silk Dress</span></div>
+            </div>
+            <div class="grid-card">
+              <img src="images accueil/image2.jpg" alt="Summer wear">
+              <div class="grid-card-overlay"><span>Urban Knit Wear</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="seasonal-block winter-theme" id="winter">
+          <div class="seasonal-desc-box">
+            <span class="season-badge">Cold Drop</span>
+            <h2 class="seasonal-heading">Collections <span class="serif">Hiver</span></h2>
+            <p class="seasonal-text">
+              Nos sélections hivernales sont conçues pour offrir un confort absolu et une isolation parfaite, sans sacrifier l'élégance du tailleur. Découvrez les manteaux ultimes et les pulls en laine premium.
+            </p>
+            <a href="../Produit/Produit.html"><button class="explore-btn outline-btn" id="explore-winter">
+              Explorer
+              <span class="arrow-wrap">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </button></a>
+          </div>
+          <div class="seasonal-grid">
+            <div class="grid-card">
+              <img src="images accueil/manteau.jpg" alt="Chic Winter Outerwear">
+              <div class="grid-card-overlay"><span>Cashmere Topcoat</span></div>
+            </div>
+            <div class="grid-card tall-card">
+              <img src="images accueil/pullhiver.jpg" alt="Cozy Heavy Knits">
+              <div class="grid-card-overlay"><span>Heavy Wool Knitwear</span></div>
+            </div>
+            <div class="grid-card">
+              <img src="images accueil/gloves.jpg" alt="Luxe Winter Accessories">
+              <div class="grid-card-overlay"><span>Suede Gloves & Wrap</span></div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="store-footer" id="footer">
+      <div class="store-footer-inner">
+
+        <div class="footer-brand">
+          <span class="footer-logo">Silk Road</span>
+          <p class="footer-tagline">Élevez votre style, embrassez votre histoire.</p>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-col-title">Contactez-nous</h4>
+
+          <a href="mailto:contact@silkroad-boutique.com" class="footer-contact-item">
+            <i class="fa-regular fa-envelope"></i>
+            <span>contact@silkroad-boutique.com</span>
+          </a>
+
+          <a href="tel:+213555123456" class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+213 555 123 456</span>
+          </a>
+
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>12 Rue Amyoud, Tizi-Ouzou, Algérie</span>
+          </div>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-col-title">Suivez-nous</h4>
+
+          <a href="https://facebook.com/silkroadboutique" target="_blank" rel="noopener" class="footer-social-item">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+          </a>
+
+          <a href="https://instagram.com/silkroad_boutique" target="_blank" rel="noopener" class="footer-social-item">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+
+          <a href="https://snapchat.com/add/silkroadboutique" target="_blank" rel="noopener" class="footer-social-item">
+            <i class="fa-brands fa-snapchat"></i>
+            <span>Snapchat</span>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Silk Road Boutique. Conçu avec élégance.</p>
+        <div class="footer-links">
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close" aria-label="Fermer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-grid">
+        <div class="modal-visual">
+          <img src="" alt="Vue produit" id="modal-product-img">
+        </div>
+        <div class="modal-details">
+          <span class="modal-tag">Nouveau</span>
+          <h2 class="modal-title" id="modal-product-title">Nom du produit</h2>
+          <span class="modal-price" id="modal-product-price">$0.00</span>
+
+          <div class="divider"></div>
+
+          <p class="modal-description" id="modal-product-desc">Description du produit.</p>
+
+          <div class="modal-options">
+
+            
+            <div class="option-group">
+              <span class="option-label" id="modal-size-label">Taille</span>
+              <div class="size-selectors" id="modal-size-group"></div>
+            </div>
+
+            
+            <div class="option-group">
+              <span class="option-label">Couleur</span>
+              <div class="color-selectors" id="modal-color-group"></div>
+            </div>
+
+          </div>
+
+          <div class="modal-actions">
+            <button class="modal-add-btn" id="modal-add-to-cart">Ajouter au panier</button>
+            <button class="modal-save-btn" id="modal-save-wishlist">
+              <i class="fa-regular fa-bookmark"></i>
+              <span class="save-btn-text">Sauvegarder</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="side-panel" id="cart-panel" role="dialog" aria-modal="true" aria-label="Panier">
+    <div class="side-panel-inner">
+      <div class="side-panel-header">
+        <h3 class="side-panel-title">Mon Panier</h3>
+        <button class="side-panel-close" id="cart-panel-close" aria-label="Fermer le panier">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+
+      <div class="side-panel-body">
+        <div id="cart-empty-msg" class="panel-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z"/>
+          </svg>
+          <p>Votre panier est vide</p>
+        </div>
+        <div id="cart-panel-items"></div>
+      </div>
+
+      <div class="side-panel-footer">
+        <div class="cart-total" id="cart-panel-total">Total: $0.00</div>
+        <a href="../commande/Commande.html"><button class="checkout-btn">Commander →</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="side-panel" id="wishlist-panel" role="dialog" aria-modal="true" aria-label="Favoris">
+    <div class="side-panel-inner">
+      <div class="side-panel-header">
+        <h3 class="side-panel-title">Mes Favoris</h3>
+        <button class="side-panel-close" id="wishlist-panel-close" aria-label="Fermer les favoris">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+
+      <div class="side-panel-body">
+        <div id="wishlist-empty-msg" class="panel-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"/>
+          </svg>
+          <p>Aucun article sauvegardé</p>
+        </div>
+        <div id="wishlist-panel-items"></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="toast-container" id="toast-wrapper"></div>
+
+  <script src="Index.js"></script>
+</body>
+</html>
